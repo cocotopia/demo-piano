@@ -1,4 +1,3 @@
-import logo from "./logo.svg";
 import "./App.css";
 import React, { useEffect } from "react";
 
@@ -12,6 +11,9 @@ function App() {
       var b = document.getElementsByTagName("script")[0];
       b.parentNode.insertBefore(a, b);
     })("//sandbox.tinypass.com/xbuilder/experience/load?aid=PeVZORGJsu");
+
+    const tp = window.tp || [];
+    tp.push(["setCookieDomain", "cocotopia.github.io"]);
   }, []);
 
   const PianoLogin = () => {
@@ -47,6 +49,20 @@ function App() {
     ]);
   };
 
+  const PianoLogout = () => {
+    const tp = window.tp || [];
+    tp.push([
+      "init",
+      function () {
+        console.log("logout");
+        tp = window.tp || [];
+        tp.pianoId.logout();
+        //reload the page
+        window.location.reload();
+      },
+    ]);
+  };
+
   const PianoProfile = () => {
     const tp = window["tp"] || [];
     tp.push([
@@ -74,6 +90,7 @@ function App() {
         </a>
 
         <button onClick={PianoProfile}> Mi Perfil </button>
+        <button onClick={PianoLogout}></button>
       </header>
     </div>
   );
