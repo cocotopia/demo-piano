@@ -1,7 +1,9 @@
 import "./App.css";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 
 function App() {
+  const [nameUser, setNameUser] = useState();
+
   useEffect(() => {
     (function (src) {
       var a = document.createElement("script");
@@ -20,11 +22,11 @@ function App() {
 
   const PianoLogin = () => {
     console.log("login");
-    const tp = window.tp || [];
-    tp.push([
+    // const tp = window.tp || [];
+    window.tp.push([
       "init",
       function () {
-        tp.pianoId.show({
+        window.tp.pianoId.show({
           disableSignUp: false, // habilitar formulario registro
           displayMode: "modal", //inline
           screen: "register", // plantilla login - registro -
@@ -37,13 +39,14 @@ function App() {
               " logged in with token",
               data.token
             );
+            setNameUser(data.user.given_name);
           },
           //Set the CSS and HTML here for what the signup button should look like when the user is logged in
           //e.g. unhide the signout button, hide the sign-in button
 
           loggedOut: function () {
             // callback cierra sesion
-            console.log("user logged out");
+            console.log("el usuario ah salido!");
             //Set the CSS and HTML here for what the signup button should look like when the user is logged out //e.g. unhide the sign in button, hide the signout button
           },
         });
@@ -52,25 +55,23 @@ function App() {
   };
 
   const PianoLogout = () => {
-    const tp = window.tp || [];
-    tp.push([
+    // const tp = window.tp || [];
+    window.tp.push([
       "init",
       function () {
         console.log("logout");
-        tp = window.tp || [];
-        tp.pianoId.logout();
-        //reload the page
+        window.tp.pianoId.logout();
         window.location.reload();
       },
     ]);
   };
 
   const PianoProfile = () => {
-    const tp = window["tp"] || [];
-    tp.push([
+    // const tp = window["tp"] || [];
+    window.tp.push([
       "init",
       function () {
-        tp.myaccount.show({
+        window.tp.myaccount.show({
           displayMode: "inline",
           containerSelector: "#my-account",
         });
@@ -81,7 +82,8 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <p>Bienvenido a mi Sitio</p>
+        <p>Bienvenido a mi Sitio {nameUser}</p>
+
         <a
           className="App-link"
           href="#"
