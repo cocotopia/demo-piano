@@ -12,8 +12,10 @@ function App() {
       b.parentNode.insertBefore(a, b);
     })("//sandbox.tinypass.com/xbuilder/experience/load?aid=PeVZORGJsu");
 
-    const tp = window.tp || [];
-    tp.push(["setCookieDomain", "cocotopia.github.io"]);
+    setTimeout(() => {
+      const tp = window.tp || [];
+      tp.push(["setCookieDomain", "cocotopia.github.io"]);
+    }, 1000);
   }, []);
 
   const PianoLogin = () => {
@@ -90,7 +92,7 @@ function App() {
         </a>
 
         <button onClick={PianoProfile}> Mi Perfil </button>
-        <button onClick={PianoLogout}></button>
+        <button onClick={PianoLogout}> Salir </button>
       </header>
     </div>
   );
