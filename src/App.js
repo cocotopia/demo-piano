@@ -63,7 +63,6 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
         <p>Bienvenido a mi Sitio</p>
         <a
           className="App-link"
@@ -71,7 +70,7 @@ function App() {
           rel="noopener noreferrer"
           onClick={PianoLogin}
         >
-          Inciar
+          Iniciar
         </a>
 
         <button onClick={PianoProfile}> Mi Perfil </button>
