@@ -1,15 +1,13 @@
 {
   "files": {
-    "main.css": "/demo-piano/build/static/css/main.073c9b0a.css",
-    "main.js": "/demo-piano/build/static/js/main.3197997d.js",
-    "static/js/787.b1cb45f3.chunk.js": "/demo-piano/build/static/js/787.b1cb45f3.chunk.js",
+    "main.css": "/demo-piano/build/static/css/main.3089e79f.css",
+    "main.js": "/demo-piano/build/static/js/main.dee563b8.js",
     "index.html": "/demo-piano/build/index.html",
-    "main.073c9b0a.css.map": "/demo-piano/build/static/css/main.073c9b0a.css.map",
-    "main.3197997d.js.map": "/demo-piano/build/static/js/main.3197997d.js.map",
-    "787.b1cb45f3.chunk.js.map": "/demo-piano/build/static/js/787.b1cb45f3.chunk.js.map"
+    "main.3089e79f.css.map": "/demo-piano/build/static/css/main.3089e79f.css.map",
+    "main.dee563b8.js.map": "/demo-piano/build/static/js/main.dee563b8.js.map"
   },
   "entrypoints": [
-    "static/css/main.073c9b0a.css",
-    "static/js/main.3197997d.js"
+    "static/css/main.3089e79f.css",
+    "static/js/main.dee563b8.js"
   ]
 }
