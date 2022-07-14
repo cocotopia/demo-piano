@@ -18,6 +18,7 @@ const Header = () => {
       tp.push(["setCookieDomain", "cristhianbuiza.github.io"]);
     }, 1000);
   }, []);
+
   const PianoLogin = () => {
     setLoading(true);
     window.tp.push([
@@ -66,7 +67,9 @@ const Header = () => {
               " logged in with token",
               data.token
             );
-            setNameUser(data.user.given_name);
+            setTimeout(() => {
+              setNameUser(data.user.given_name);
+            }, 1000);
           },
           loggedOut: function () {
             // callback cierra sesion
