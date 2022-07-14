@@ -1,4 +1,3 @@
-import "./App.css";
 import React, { useEffect, useState } from "react";
 
 function App() {
@@ -16,7 +15,7 @@ function App() {
 
     setTimeout(() => {
       const tp = window.tp || [];
-      tp.push(["setCookieDomain", "cocotopia.github.io"]);
+      tp.push(["setCookieDomain", "cristhianbuiza.github.io"]);
     }, 1000);
   }, []);
 
