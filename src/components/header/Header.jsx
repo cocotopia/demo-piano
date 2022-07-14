@@ -119,7 +119,7 @@ const Header = () => {
           <h1>Piano-Demo</h1>
         </div>
         <div className="nav-right">
-          {isLoggedIn ? (
+          {!isLoggedIn ? (
             <>
               <a className="btn btn-primary" onClick={PianoLogout}>
                 Logout
