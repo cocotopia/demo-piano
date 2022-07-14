@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./header.css";
 const Header = () => {
   const [loading, setLoading] = useState(true);
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
   const [nameUser, setNameUser] = useState();
   useEffect(() => {
     (function (src) {
@@ -30,14 +30,16 @@ const Header = () => {
           screen: "login", // plantilla login - registro -
           containerSelector: "#login-form", // contenedor o div donde mostrara plantilla
           loggedIn: function (data) {
-            // callback  inicia sesion
+            console.log(data);
             console.log(
               "user ",
               data.user,
               " logged in with token",
               data.token
             );
-            setNameUser(data.user.given_name);
+            setTimeout(() => {
+              setNameUser(data.user.given_name);
+            }, 1000);
           },
           loggedOut: function () {
             // callback cierra sesion
