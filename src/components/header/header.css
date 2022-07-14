@@ -1,0 +1,16 @@
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 20px;
+  border-bottom: 2px solid #ccc;
+}
+.nav-right {
+  margin-left: 30px;
+}
+.container {
+  height: 75vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
