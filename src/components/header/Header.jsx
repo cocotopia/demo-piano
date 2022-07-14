@@ -38,7 +38,7 @@ const Header = () => {
               data.token
             );
             setTimeout(() => {
-              setNameUser(data.user.given_name);
+              setNameUser(data.user.firstName);
             }, 1000);
           },
           loggedOut: function () {
