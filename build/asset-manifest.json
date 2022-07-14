@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/demo-piano/build/static/css/main.3089e79f.css",
-    "main.js": "/demo-piano/build/static/js/main.bf7ced87.js",
+    "main.js": "/demo-piano/build/static/js/main.69c40788.js",
     "index.html": "/demo-piano/build/index.html",
     "main.3089e79f.css.map": "/demo-piano/build/static/css/main.3089e79f.css.map",
-    "main.bf7ced87.js.map": "/demo-piano/build/static/js/main.bf7ced87.js.map"
+    "main.69c40788.js.map": "/demo-piano/build/static/js/main.69c40788.js.map"
   },
   "entrypoints": [
     "static/css/main.3089e79f.css",
-    "static/js/main.bf7ced87.js"
+    "static/js/main.69c40788.js"
   ]
 }
