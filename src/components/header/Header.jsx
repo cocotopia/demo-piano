@@ -91,6 +91,7 @@ const Header = () => {
   };
   const PianoProfile = () => {
     // const tp = window["tp"] || [];
+    setLoading(true);
     window.tp.push([
       "init",
       function () {
@@ -100,6 +101,7 @@ const Header = () => {
         });
       },
     ]);
+    setLoading(false);
   };
 
   return (
@@ -125,7 +127,7 @@ const Header = () => {
       </header>
       {loading ? (
         <div className="container">
-          <h1>hola</h1>
+          <h1>Hola, {nameUser}</h1>
         </div>
       ) : (
         ""
