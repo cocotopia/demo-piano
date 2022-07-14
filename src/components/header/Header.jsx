@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./header.css";
 const Header = () => {
   const [loading, setLoading] = useState(true);
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
   const [nameUser, setNameUser] = useState();
   useEffect(() => {
     (function (src) {
@@ -30,7 +30,6 @@ const Header = () => {
           screen: "login", // plantilla login - registro -
           containerSelector: "#login-form", // contenedor o div donde mostrara plantilla
           loggedIn: function (data) {
-            isLoggedIn(true);
             console.log(data);
             console.log(
               "user ",
@@ -77,7 +76,6 @@ const Header = () => {
           loggedOut: function () {
             // callback cierra sesion
             console.log("el usuario ah salido!");
-            isLoggedIn(false);
             //Set the CSS and HTML here for what the signup button should look like when the user is logged out //e.g. unhide the sign in button, hide the signout button
           },
         });
@@ -95,7 +93,6 @@ const Header = () => {
         window.location.reload();
       },
     ]);
-    isLoggedIn(false);
   };
   const PianoProfile = () => {
     // const tp = window["tp"] || [];
@@ -119,25 +116,18 @@ const Header = () => {
           <h1>Piano-Demo</h1>
         </div>
         <div className="nav-right">
-          {!isLoggedIn ? (
-            <>
-              <a className="btn btn-primary" onClick={PianoLogout}>
-                Logout
-              </a>
-              <a className="btn btn-primary" onClick={PianoProfile}>
-                Profile
-              </a>
-            </>
-          ) : (
-            <>
-              <a className="btn btn-primary" onClick={PianoLogin}>
-                Login
-              </a>
-              <a className="btn btn-primary" onClick={PianoRegister}>
-                Registro
-              </a>
-            </>
-          )}
+          <a className="btn btn-primary" onClick={PianoLogin}>
+            Login
+          </a>
+          <a className="btn btn-primary" onClick={PianoRegister}>
+            Registro
+          </a>
+          <a className="btn btn-primary" onClick={PianoLogout}>
+            Logout
+          </a>
+          <a className="btn btn-primary" onClick={PianoProfile}>
+            Profile
+          </a>
         </div>
       </header>
       {loading ? (
